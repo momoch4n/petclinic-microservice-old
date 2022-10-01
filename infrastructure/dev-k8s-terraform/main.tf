@@ -176,7 +176,7 @@ resource "aws_instance" "worker-1" {
     iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
-    subnet_id = "vpc-024963d241215ccd3"  # select own subnet_id of us-east-1a
+    subnet_id = "subnet-019ff9e0d329bebe3"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-1"
@@ -194,7 +194,7 @@ resource "aws_instance" "worker-2" {
     iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
-    subnet_id = "vpc-024963d241215ccd3"  # select own subnet_id of us-east-1a
+    subnet_id = "subnet-019ff9e0d329bebe3"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
         Name = "worker-2"
